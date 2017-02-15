@@ -1,0 +1,28 @@
+<!-- Khan Academy's Computer Programming -->
+<!-- Intro to JS: Drawing & Animation -->
+<!-- Drawing basics -->
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>JavaScript & ProcessingJS example</title>
+    </head>
+    <body>
+ 		<!-- Canvas -->
+        <canvas id = "canvas"></canvas>
+    </body>
+
+    <!-- Import Library: Processing.js -->
+    <script src="../processing.js"></script>
+
+    <!-- Import my code from drawing-basics.js -->
+    <script src="coloring.js"></script>
+
+    <!-- ? -->
+    <script type="application/javascript">
+    var canvas = document.getElementById("canvas");
+    var processingInstance = new Processing(canvas, sketchProc);
+    </script>
+      
+</html>

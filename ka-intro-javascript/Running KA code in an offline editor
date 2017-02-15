@@ -1,0 +1,66 @@
+Advice I posted on KA.
+
+For those who are interested in running code from KA exercises in an IDE. I found various methods and advice online and decided to post my experience once I got things working. Im new to JS and programming. Today is my first time with JavaScript and the first thing I wanted to do was to get an IDE up and running after the first KA exercise.
+
+Below are my code examples and some instructions on getting up and running too...
+
+#1 My HTML file:
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>JavaScript & ProcessingJS example</title>
+    </head>
+    <body>
+ 		<!-- Canvas -->
+        <canvas id = "canvas"></canvas>
+    </body>
+
+    <!-- Import Library: Processing.js -->
+    <script src="processing.js"></script>
+
+    <!-- Import my code from drawing-basics.js -->
+    <script src="drawing-basics.js"></script>
+
+    <!-- ? -->
+    <script type="application/javascript">
+    var canvas = document.getElementById("canvas");
+    var processingInstance = new Processing(canvas, sketchProc);
+    </script>
+      
+</html>
+
+#2 My JavaScript file:
+
+var sketchProc = function(processingInstance) { with (processingInstance) {
+
+// Size of the canvas
+size(400, 400);
+
+// The refresh rate of the canvas
+frameRate(30);
+
+// The background
+background(100, 100, 100);
+
+// The background fill colour
+fill(255, 255, 255);
+
+// ellipse is a function
+// ellipse(x-position, y-position, width, height)
+// The code below will output a snowman
+
+// bottom circle:
+ellipse(200, 300, 150, 150);
+
+// middle circle:
+ellipse(200, 200, 100, 100);
+
+// top circle:
+ellipse(200, 150, 60, 60);
+
+}};
+
+#3 Download ProcessingJS from http://www.processingjs.org/download/
+Note after the link is clicked, it displays a lot of text. Simply right-click the webpage and select SAVE AS. The file name should already be there and will either show processing.js or processing.min.js depending if you chose development or the production download link. This file should be saved in the same folder as your .html file and .js (javascript) file. You should have 3 files in your project folder (1 .html file & 2 .js files). Looking for an IDE? SublimeText is a popular web development editor found at http://www.sublimetext.com and once your ready to test, open your HTML file (right-click, open with) an Internet browser. My browser is Google Chrome and displays the snowman. Good Luck.

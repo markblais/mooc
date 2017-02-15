@@ -1,0 +1,13 @@
+/* Choosing a Selector */
+
+/* Tag  */
+p {
+
+}
+
+/* Class */
+.description {
+	color: red;
+}
+
+/* ID */
